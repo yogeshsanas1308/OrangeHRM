@@ -1,0 +1,17 @@
+
+
+<suite name="Suite">
+  <test thread-count="5" name="edgeBrowser">
+  <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="test.VerifyAdminFlow"/>
+    </classes>
+  </test> <!-- Test -->
+  
+   <test thread-count="5" name="chromeBrowser">
+  <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="test.VerifyAdminFlow"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
