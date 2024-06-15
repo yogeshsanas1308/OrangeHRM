@@ -44,7 +44,7 @@ public class AdminModule {
 	{
 		PageFactory.initElements(driver, this);
 		wait = new WebDriverWait(driver,10);
-		
+		actions = new Actions(driver);
 	}
 	
 	public void editSecondRecord()
@@ -63,8 +63,8 @@ public class AdminModule {
 	public void clearUserNameInUserManagenent()
 	{
 		
-		userNameInUser.clear();
-		
+	//	actions.click(userNameInUser).keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys(Keys.BACK_SPACE);
+		userNameInUserManagenent.clear();
 	}
 	
 	public void enterUserNameInUserManagenent(String userdata)

@@ -29,6 +29,7 @@ public class VerifyAdminFlow {
 	private WebDriver driver;
 	private SoftAssert soft;
 	private Utility utility;
+
 	
 	
 	@BeforeTest
@@ -80,6 +81,7 @@ public class VerifyAdminFlow {
 	@Test
 	public void verifyAdminModuleFlow() throws InterruptedException, IOException
 	{
+		
 		soft = new SoftAssert();
 		//verify Title
 		String title = driver.getTitle();
@@ -102,15 +104,20 @@ public class VerifyAdminFlow {
 		Thread.sleep(3000);
 		adminModule.enterUserNameInUserManagenent("jojobean123");
 		Thread.sleep(3000);
-		Utility.getScreenShotCode(driver);
+		adminModule.clickOnsubmitButton();
+		Thread.sleep(5000);
+	//	Utility.getScreenShotCode(driver);
+		
 		
 		
 		
 	}
 	
 	@AfterMethod
-	public void logoutFromOrangeHRM()
+	public void logoutFromOrangeHRM() throws IOException
 	{
+		Utility.getScreenShotCode(driver);
+		
 		headersOfOrangeHRM.clickOnLogoutButton();
 	}
 	

@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.OutputType;
@@ -18,11 +20,13 @@ public class Utility {
 		
         File Source = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         
-        File Dest = new File("D:\\Job\\Screenshot\\orange.jpg");
+        File Dest = new File("D:\\Job\\Screenshot\\orange4.jpg");
         
         FileHandler.copy(Source, Dest);
 		
 	}
+	
+	
 	
 	
 }
